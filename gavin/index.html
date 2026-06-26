@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gavin Instagram Growth Progress Report</title>
+  <style>
+    :root {
+      --ink: #15161a;
+      --muted: #5e6470;
+      --line: #d9dee7;
+      --paper: #fbfbf8;
+      --panel: #ffffff;
+      --teal: #0f766e;
+      --mint: #dff5ef;
+      --coral: #e9654f;
+      --gold: #d6a23f;
+      --charcoal: #252832;
+      --soft: #f5f7fa;
+      --blue: #2563eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    .report {
+      max-width: 1080px;
+      margin: 0 auto;
+      background: var(--panel);
+      box-shadow: 0 24px 80px rgba(22, 28, 45, 0.10);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(145deg, rgba(15, 118, 110, 0.12), transparent 45%),
+        linear-gradient(340deg, rgba(233, 101, 79, 0.10), transparent 42%),
+        #ffffff;
+    }
+
+    .hero-main {
+      padding: 58px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 38px;
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.08;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      font-weight: 820;
+      color: var(--charcoal);
+    }
+
+    h2 {
+      font-size: clamp(29px, 4vw, 44px);
+      color: var(--charcoal);
+    }
+
+    h3 {
+      color: var(--charcoal);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      max-width: 680px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.42;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 680px;
+    }
+
+    .meta {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .meta span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .meta strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 16px;
+    }
+
+    .hero-side {
+      padding: 58px 44px;
+      color: #ffffff;
+      background: var(--charcoal);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .status-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .status {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .status strong {
+      font-size: 15px;
+    }
+
+    .status span {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+    }
+
+    .pill {
+      align-self: center;
+      min-width: 58px;
+      min-height: 58px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 850;
+      color: var(--ink);
+      background: var(--mint);
+      white-space: nowrap;
+    }
+
+    .section {
+      padding: 54px 58px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(280px, 1fr);
+      gap: 42px;
+      align-items: start;
+      margin-bottom: 30px;
+    }
+
+    .section-kicker {
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .note {
+      border-left: 4px solid var(--teal);
+      padding: 18px 20px;
+      background: #f1fbf8;
+      border-radius: 0 8px 8px 0;
+      color: #24423e;
+      font-size: 17px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    .metric {
+      font-size: 38px;
+      font-weight: 850;
+      color: var(--teal);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    .card p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 15px 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+    }
+
+    th {
+      color: var(--charcoal);
+      background: var(--soft);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 4px 9px;
+      color: #ffffff;
+      background: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .tag.partial { background: var(--gold); }
+    .tag.gap { background: var(--coral); }
+    .tag.info { background: var(--blue); }
+
+    .phase-band {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .phase {
+      padding: 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .phase:last-child {
+      border-right: 0;
+    }
+
+    .phase span {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .phase p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .quote {
+      padding: 34px;
+      border-radius: 8px;
+      background: var(--charcoal);
+      color: #ffffff;
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      line-height: 1.16;
+    }
+
+    .quote small {
+      display: block;
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .footer {
+      padding: 34px 58px;
+      color: var(--muted);
+      background: #f6f7f9;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .section-header, .grid-4, .grid-3, .grid-2, .phase-band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-main, .hero-side, .section, .footer {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .phase {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .phase:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .report {
+        box-shadow: none;
+        max-width: none;
+      }
+
+      .section, .hero {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="report">
+    <header class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">HeyNoww Client Report</div>
+        <div>
+          <h1>Gavin Instagram Growth Progress Report</h1>
+          <p class="subtitle">A progress review of what has been built, what early performance is showing, and how the next phase should move from setup into stronger optimization and growth.</p>
+        </div>
+        <div class="meta-grid">
+          <div class="meta"><span>Prepared for</span><strong>Gavin</strong></div>
+          <div class="meta"><span>Prepared by</span><strong>HeyNoww</strong></div>
+          <div class="meta"><span>Reporting period</span><strong>May 27 – June 26, 2026</strong></div>
+          <div class="meta"><span>Report type</span><strong>Progress + Strategy Review</strong></div>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <h2>Snapshot</h2>
+        <div class="status-stack">
+          <div class="status"><div><strong>Reel ideas delivered</strong><br><span>Four batches have been provided.</span></div><em class="pill">35</em></div>
+          <div class="status"><div><strong>Videos reviewed</strong><br><span>Includes original reviews and revised edits.</span></div><em class="pill">28</em></div>
+          <div class="status"><div><strong>Revision requests</strong><br><span>Videos sent back for improvement.</span></div><em class="pill">9</em></div>
+          <div class="status"><div><strong>Published links tracked</strong><br><span>Logged in the posting tracker.</span></div><em class="pill">22</em></div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Executive Summary</div>
+          <h2>Month one created the foundation for the content system.</h2>
+        </div>
+        <p class="lead">The first month clarified your team’s content process, established the review rhythm, started performance tracking, and identified the first winning pattern to repeat in the next phase.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Progress Snapshot</div>
+          <h2>What has been completed so far</h2>
+        </div>
+        <p class="lead">These numbers reflect the clearest confirmed progress from the current working period.</p>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <div class="metric">35</div>
+          <h3>Reel ideas delivered</h3>
+          <p>Four batches: 14 ideas, followed by three additional batches of 7 ideas each. Later batches include reference examples where relevant.</p>
+        </article>
+        <article class="card">
+          <div class="metric">28</div>
+          <h3>Videos reviewed</h3>
+          <p>Includes review decisions across original videos and revised edits, helping the team improve before publishing.</p>
+        </article>
+        <article class="card">
+          <div class="metric">9</div>
+          <h3>Revision requests</h3>
+          <p>Videos were sent back for revisions when pacing, clarity, hook structure, or editing needed improvement.</p>
+        </article>
+        <article class="card">
+          <div class="metric">22</div>
+          <h3>Published links tracked</h3>
+          <p>Published content links have started being logged, creating a stronger base for future performance analysis.</p>
+        </article>
+      </div>
+      <br>
+      <div class="grid-3">
+        <article class="card">
+          <div class="metric">5</div>
+          <h3>Re-edits reviewed again</h3>
+          <p>Revised videos were checked again after changes were made, showing the feedback loop is active.</p>
+        </article>
+        <article class="card">
+          <div class="metric">1</div>
+          <h3>Clear winner identified</h3>
+          <p>One tracked post has emerged as the clearest early winner, giving the next phase a stronger direction to test.</p>
+        </article>
+        <article class="card">
+          <div class="metric">3</div>
+          <h3>Promising posts</h3>
+          <p>Three additional posts are showing promising signals and should help guide future variations.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Key Progress Milestones</div>
+          <h2>Where the system has moved forward</h2>
+        </div>
+        <p class="lead">Instead of treating month one only as a performance period, it is more accurate to view it as the setup and adaptation phase.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Milestone</th>
+            <th>What it means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Strategy foundation created</td>
+            <td>35 Reel ideas have been delivered across four batches, creating a clear idea base for the account.</td>
+          </tr>
+          <tr>
+            <td>Process discovery completed</td>
+            <td>The first month has clarified how your team records, edits, revises, publishes, and tracks content.</td>
+          </tr>
+          <tr>
+            <td>Review workflow established</td>
+            <td>28 videos have been reviewed, 9 were sent back for revisions, and 5 re-edits were reviewed again after changes.</td>
+          </tr>
+          <tr>
+            <td>Posting tracker started</td>
+            <td>The team has started logging dates, video links, and Instagram links, which will make reporting more reliable going forward.</td>
+          </tr>
+          <tr>
+            <td>Early performance signal found</td>
+            <td>One clear winner and three promising posts have emerged from the current tracked data.</td>
+          </tr>
+          <tr>
+            <td>Next phase identified</td>
+            <td>The next two months should move from setup and adaptation into optimization, repetition of winning patterns, and clearer growth pressure.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Strategy Implementation</div>
+          <h2>What has been implemented versus what still needs alignment</h2>
+        </div>
+        <p class="lead">The Reel system is active, but the broader strategy needs tighter execution and cleaner tracking so future decisions are easier to evaluate.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Strategy area</th>
+            <th>Status</th>
+            <th>What happened</th>
+            <th>Recommended action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Reel ideation</td>
+            <td><span class="tag">Implemented</span></td>
+            <td>35 Reel ideas have been delivered across four batches. Batch 3 and Batch 4 appear to have been used less so far.</td>
+            <td>Prioritize the strongest unused ideas and turn them into clearer tests for the next phase.</td>
+          </tr>
+          <tr>
+            <td>Video review</td>
+            <td><span class="tag">Implemented</span></td>
+            <td>28 videos reviewed, including 9 revision requests and 5 re-edits reviewed again after updates.</td>
+            <td>Continue using the review process to tighten hooks, pacing, framing, and CTA structure before publishing.</td>
+          </tr>
+          <tr>
+            <td>Reel publishing</td>
+            <td><span class="tag">Active</span></td>
+            <td>Published links are now being logged in the posting tracker, with 22 links tracked from June 15 to June 25.</td>
+            <td>Maintain this new habit consistently so each Reel can be connected to its performance data quickly.</td>
+          </tr>
+          <tr>
+            <td>Performance tracking</td>
+            <td><span class="tag partial">Improving</span></td>
+            <td>The tracker was not used early in the engagement, but it was updated this week and is now starting to show useful performance patterns.</td>
+            <td>Continue using the performance tracker consistently so each post can inform the next creative decision.</td>
+          </tr>
+          <tr>
+            <td>Stories</td>
+            <td><span class="tag gap">Not implemented</span></td>
+            <td>The current execution is Reels only, leaving a visibility and relationship-building layer unused.</td>
+            <td>Start with a simple habit: reshare each published Reel to Stories to create another touchpoint.</td>
+          </tr>
+          <tr>
+            <td>Carousels</td>
+            <td><span class="tag gap">Not implemented</span></td>
+            <td>No confirmed carousel execution during this period, even though some Reel topics could become saveable educational posts.</td>
+            <td>Repurpose selected strong Reel topics into simple carousels to create another visibility and authority-building format.</td>
+          </tr>
+          <tr>
+            <td>Community engagement</td>
+            <td><span class="tag partial">Partial</span></td>
+            <td>Some comments were answered, while other relevant comments remained unanswered.</td>
+            <td>Check comments daily and respond to relevant comments within 24 hours.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Early Performance Signals</div>
+          <h2>What the tracked posts are starting to show</h2>
+        </div>
+        <p class="lead">The current performance sample is still early, but it is already giving useful direction for the next phase.</p>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <div class="metric">17</div>
+          <h3>Tracked posts analyzed</h3>
+          <p>Current performance data provides a starting point for pattern recognition, not a final conclusion.</p>
+        </article>
+        <article class="card">
+          <div class="metric">1</div>
+          <h3>Winner</h3>
+          <p>The clearest winner was a practical, result-driven post showing how to get email marketing clients using Claude.</p>
+        </article>
+        <article class="card">
+          <div class="metric">3</div>
+          <h3>Promising posts</h3>
+          <p>Promising signals came from the email stress/humor post, the AI Klaviyo audit post, and the agency attribution-check post.</p>
+        </article>
+        <article class="card">
+          <div class="metric">163</div>
+          <h3>Average views</h3>
+          <p>Average view count across the current tracked posts is approximately 163 views per post.</p>
+        </article>
+      </div>
+      <br>
+      <div class="note">The strongest early signal is practical, result-driven content that shows how to solve a specific problem, especially when paired with AI, tool walkthroughs, or client-acquisition angles. More technical education and niche retention concepts may still be valuable, but they need stronger emotional framing, clearer stakes, or a faster hook.</div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Performance Categories</div>
+          <h2>How the current tracked posts are distributed</h2>
+        </div>
+        <p class="lead">The distribution shows that the account is still in the testing phase. The goal now is to repeat the strongest patterns and improve weaker formats.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Count</th>
+            <th>Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag">Winner</span></td>
+            <td>1</td>
+            <td>One post has emerged as the clearest signal to study and replicate.</td>
+          </tr>
+          <tr>
+            <td><span class="tag info">Promising</span></td>
+            <td>3</td>
+            <td>These posts show enough signal to justify follow-up variations.</td>
+          </tr>
+          <tr>
+            <td><span class="tag partial">Average</span></td>
+            <td>6</td>
+            <td>These posts are useful as baseline content, but need stronger hooks, pacing, or framing.</td>
+          </tr>
+          <tr>
+            <td><span class="tag gap">Underperformed</span></td>
+            <td>7</td>
+            <td>These should not be repeated in the same format without changing the hook, structure, or audience framing.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Video Review Patterns</div>
+          <h2>What is becoming clearer from the review process</h2>
+        </div>
+        <p class="lead">The review process is helping define what a stronger Gavin-style Reel should look like.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Recurring improvement areas</h3>
+          <ul>
+            <li>Some frames are held too long, which slows the pace.</li>
+            <li>The first 1–3 seconds are not always the strongest entry point.</li>
+            <li>Some CTAs appear too early or do not feel connected enough to the topic.</li>
+            <li>Several videos need more visual movement, interaction, or pattern breaks.</li>
+            <li>Some technical ideas need clearer stakes so the audience immediately understands why they matter.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Creative opportunity</h3>
+          <p>The next phase should focus on faster pacing, sharper opening hooks, clearer outcomes, and more interactive visual structure. The goal is not just to publish more, but to make each Reel easier to watch, easier to understand, and easier to act on.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">What Is Working</div>
+          <h2>Positive signals</h2>
+        </div>
+        <p class="lead">The project has already created momentum across planning, production, review, publishing, and early analysis.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Creative volume is moving</h3>
+          <p>Four batches of ideas have been created, giving the team a strong bank of strategic topics to work from.</p>
+        </article>
+        <article class="card">
+          <h3>Revision loop is active</h3>
+          <p>Videos are being reviewed, sent back when needed, revised, and reviewed again. This is important for quality control.</p>
+        </article>
+        <article class="card">
+          <h3>Process learning is clearer</h3>
+          <p>Reviewing both planned content and existing assets has helped clarify how the team works and where the creative process can improve.</p>
+        </article>
+        <article class="card">
+          <h3>Performance tracking has started</h3>
+          <p>The posting tracker and performance tracker are beginning to create a clearer view of what is being published and how it is performing.</p>
+        </article>
+        <article class="card">
+          <h3>First winner identified</h3>
+          <p>The winning post gives the team a practical pattern to repeat: clear outcome, specific tool, and direct business use case.</p>
+        </article>
+        <article class="card">
+          <h3>Support formats are available</h3>
+          <p>Stories and carousels can now be used to give strong Reel ideas more visibility without creating a heavy new content burden.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Needs Attention</div>
+          <h2>What should improve next</h2>
+        </div>
+        <p class="lead">These are the highest-leverage improvements for making the growth system easier to manage, measure, and optimize.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Current issue</th>
+            <th>Why it matters</th>
+            <th>Next step</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Publishing links</td>
+            <td>This has improved: links are now being added to the posting tracker.</td>
+            <td>This makes it easier to connect each published Reel to performance data and reporting.</td>
+            <td>Continue adding the live Reel link immediately after publishing.</td>
+          </tr>
+          <tr>
+            <td>Performance tracker</td>
+            <td>The tracker has started to be used, which is a positive step. Deeper metrics are still being built out.</td>
+            <td>Views alone do not show the full growth impact or what should be repeated.</td>
+            <td>Continue using the performance tracker and adding deeper metrics where available.</td>
+          </tr>
+          <tr>
+            <td>Community response</td>
+            <td>Some comments received replies, while others were missed.</td>
+            <td>Replies help build audience connection and make better use of engagement.</td>
+            <td>Daily comment check by the posting or community owner.</td>
+          </tr>
+          <tr>
+            <td>Creative pacing</td>
+            <td>Some videos are holding frames too long or moving too slowly.</td>
+            <td>Slow pacing can reduce retention before the idea fully lands.</td>
+            <td>Use faster visual shifts, tighter edits, and clearer early stakes.</td>
+          </tr>
+          <tr>
+            <td>CTA placement</td>
+            <td>Some CTAs appear too early or do not match the viewer’s readiness.</td>
+            <td>If the viewer has not yet seen enough value, the CTA can feel premature.</td>
+            <td>Match the CTA to the topic and place it after the core value is clearer.</td>
+          </tr>
+          <tr>
+            <td>Stories and carousels</td>
+            <td>The current execution is Reels only.</td>
+            <td>Stories and carousels are available visibility tools that can support Reel reach, audience connection, and authority building.</td>
+            <td>Start simply: reshare each Reel to Stories, then repurpose selected strong topics into carousels.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Next Phase</div>
+          <h2>Recommended focus for months two and three</h2>
+        </div>
+        <p class="lead">The next phase should apply the learning from month one and push the system toward stronger visibility, tighter creative execution, and more consistent learning from each post.</p>
+      </div>
+      <div class="phase-band">
+        <article class="phase">
+          <span>Phase 1</span>
+          <h3>Repeat the winner</h3>
+          <p>Create variations around practical, result-driven, tool-based content that solves a specific business problem.</p>
+        </article>
+        <article class="phase">
+          <span>Phase 2</span>
+          <h3>Strengthen distribution</h3>
+          <p>Reshare Reels to Stories and repurpose selected strong topics into simple carousels to create more touchpoints.</p>
+        </article>
+        <article class="phase">
+          <span>Phase 3</span>
+          <h3>Track and decide faster</h3>
+          <p>Use the posting and performance trackers to make quicker decisions about what to repeat, revise, or stop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Next Recommendations</div>
+          <h2>Specific actions for the next period</h2>
+        </div>
+        <p class="lead">The next moves should be practical and easy to execute.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>1. Build more around the winner</h3>
+          <p>Create more videos that combine practical outcomes, AI/tool walkthroughs, and clear business use cases.</p>
+        </article>
+        <article class="card">
+          <h3>2. Use stronger opening stakes</h3>
+          <p>Make the first 1–3 seconds more specific, outcome-driven, and curiosity-led.</p>
+        </article>
+        <article class="card">
+          <h3>3. Keep tracking links daily</h3>
+          <p>The new posting tracker is working. Keep adding the date, IG link, and basic performance data for every published post.</p>
+        </article>
+        <article class="card">
+          <h3>4. Improve pacing before scale</h3>
+          <p>Shorten slow frames, add more movement, and remove delays before the core point appears.</p>
+        </article>
+        <article class="card">
+          <h3>5. Respond to relevant comments</h3>
+          <p>Relevant comments should receive timely replies to support relationship-building and engagement.</p>
+        </article>
+        <article class="card">
+          <h3>6. Activate support formats</h3>
+          <p>Reshare each Reel to Stories and start repurposing selected strong topics into simple carousels.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="quote">
+        The content engine is moving. The next unlock is repeating the strongest early patterns, improving creative pace, supporting Reels with Stories and carousels, and making every post easier to track and learn from.
+        <small>Prepared by HeyNoww for Gavin. This report focuses on progress, implementation gaps, early performance signals, and recommended next actions for the Instagram growth system.</small>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Prepared by HeyNoww for Gavin. Reporting period: May 27 – June 26, 2026. Some publishing and performance numbers may be updated as additional Instagram links and Insights are centralized.
+    </footer>
+  </main>
+</body>
+</html>
